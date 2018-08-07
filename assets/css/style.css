@@ -1,18 +1,43 @@
 body,
 html {
   height: 100%;
+  background-color: rgb(0, 0, 79);
 }
 
+.billboard {
+  margin: 50px 0px 0px 0px;
+  height: 100%;
+}
 #main_picture {
   border-radius: 15px;
 }
 
 #headline {
-  font-family: "Anton", sans-serif;
-  font-size: 400%;
+  font-family: "Domine", sans-serif;
+  font-size: 800%;
+  color: white;
+  font-weight: bold;
+}
+
+#jumbotron_picture {
+  background-image: url("../images/sdally_selfie.jpg");
+  height: 60%;
+  opacity: 0.9;
+}
+
+.sub_headline {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 200%;
+}
+.sub_headline_year {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 300%;
 }
 .lead {
-  font-family: "Lato", sans-serif;
+  font-family: "Domine", sans-serif;
+  color: white;
 }
 
 .sticky_nav {
@@ -25,7 +50,7 @@ html {
 
 .navbar_menu {
   /* background: #fefefa; */
-  background: #1dec77;
+  background: white;
   height: 70px;
 }
 
@@ -60,4 +85,8 @@ nav > a:hover:before {
 
 a:hover {
   color: black;
+}
+
+.star {
+  color: white;
 }
