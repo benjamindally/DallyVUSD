@@ -5,7 +5,7 @@ html {
 }
 
 .billboard {
-  margin: 80px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
   height: 100%;
 }
 
@@ -18,10 +18,11 @@ html {
 
 #jumbotron_picture {
   background-image: url("../images/sdally_selfie.jpg");
-  height: 50%;
+  height: 300px;
   opacity: 0.9;
   border: 1px solid white;
   box-shadow: 20px 20px 50px black;
+  vertical-align: middle;
 }
 
 .sub_headline {
@@ -94,4 +95,18 @@ a:hover {
 
 .star {
   color: white;
+}
+
+.candidate_statement_row {
+  margin: 150px 0px 150px 0px;
+}
+
+.candidate_statement {
+  background: white;
+  box-shadow: 20px 20px 50px black;
+}
+
+.candidate_statement_paragraph {
+  color: black;
+  font-family: "Lato", sans-serif;
 }
