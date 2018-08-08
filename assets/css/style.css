@@ -8,9 +8,6 @@ html {
   margin: 50px 0px 0px 0px;
   height: 100%;
 }
-#main_picture {
-  border-radius: 15px;
-}
 
 #headline {
   font-family: "Domine", sans-serif;
@@ -23,6 +20,8 @@ html {
   background-image: url("../images/sdally_selfie.jpg");
   height: 60%;
   opacity: 0.9;
+  border: 1px solid white;
+  box-shadow: 20px 20px 50px black;
 }
 
 .sub_headline {
@@ -34,6 +33,12 @@ html {
   font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 300%;
+}
+.sub_headline_reelect {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-style: italic;
+  font-size: 230%;
 }
 .lead {
   font-family: "Domine", sans-serif;
