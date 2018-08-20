@@ -30,8 +30,13 @@ $(function() {
     // let billboard = document.getElementById("billboard");
     // billboard.scrollIntoView({ behavior: "smooth" }, true);
   });
-  $("#home_nav_link").click(function() {
-    // let billboard = document.getElementById("billboard");
-    // billboard.scrollIntoView({ behavior: "smooth" }, true);
+  $("#donate_nav_link").click(function() {
+    let donate = document.getElementById("donate");
+    donate.scrollIntoView({ behavior: "smooth", block: "center" }, true);
+  });
+
+  $("#donate_button").click(function() {
+    let donate = document.getElementById("donate");
+    donate.scrollIntoView({ behavior: "smooth", block: "center" }, true);
   });
 });

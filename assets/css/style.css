@@ -2,6 +2,7 @@ body,
 html {
   height: 100%;
   background-color: rgb(0, 0, 79);
+  overflow-x: hidden;
 }
 
 .billboard {
@@ -91,6 +92,7 @@ nav > a:hover:before {
 
 a:hover {
   color: black;
+  cursor: pointer;
 }
 
 .star {
@@ -98,15 +100,66 @@ a:hover {
 }
 
 .candidate_statement_row {
-  margin: 150px 0px 150px 0px;
+  margin: 150px 0px 0px 0px;
+  background: rgb(55, 1, 79);
+  height: 150%;
 }
 
 .candidate_statement {
-  background: white;
-  box-shadow: 20px 20px 50px black;
+  margin: 80px 0px 0px 0px;
+}
+
+#candidate_statement_headline {
+  font-family: "Domine", sans-serif;
+  font-size: 500%;
+  color: white;
+  font-weight: bold;
 }
 
 .candidate_statement_paragraph {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 110%;
+}
+
+#candidate_photo {
+  height: 100%;
+}
+
+#sDally_withStudent {
+  height: 100%;
+}
+
+#connect {
+  background: rgb(0, 64, 154);
+  height: 80%;
+  padding: 50px 0px 50px 0px;
+}
+
+#connect_with_me {
+  font-family: "Domine", sans-serif;
+  font-size: 500%;
+  color: white;
+  font-weight: bold;
+  margin: 30px 0px 30px 0px;
+}
+.connect_logos {
+  margin: 0px 15px 0px 15px;
+}
+#facebook_logo {
+  width: 50px;
+}
+#mail_logo {
+  width: 55px;
+}
+
+#donate {
+  margin: 150px 0px 250px 0px;
+}
+
+#donate_header {
+  background: white;
+  box-shadow: 20px 20px 50px black;
   color: black;
   font-family: "Lato", sans-serif;
 }
