@@ -32,7 +32,8 @@ $(function() {
   //   // let placeholder = $("#fname").attr("placeholder");
   //   // placeholder.val("");
   // });
-  $("#connect_submit_button").click(function() {
+  $("#connect_submit_button").click(function(event) {
+    event.preventDefault();
     let firstName = $("#fname")
       .val()
       .trim();
@@ -77,4 +78,74 @@ $(function() {
       alert(`Thank you for your input!`);
     }
   });
+
+  $("#endorse_button").click(function(event) {
+    event.preventDefault();
+    let firstName = $("#f_endorse_name")
+      .val()
+      .trim();
+    let lastName = $("#l_endorse_name")
+      .val()
+      .trim();
+    let occupation = $("#occupation")
+      .val()
+      .trim();
+
+    document.getElementById("endorse_fname_break").innerHTML = "<p><p>";
+    document.getElementById("endorse_lname_break").innerHTML = "<p><p>";
+    document.getElementById("occupation_break").innerHTML = "<p><p>";
+
+    if (firstName === "") {
+      let errorMessageName = "Please enter your first name.";
+      document.getElementById("endorse_fname_break").innerHTML =
+        "<p>" + errorMessageName + "<p>";
+    }
+
+    if (lastName === "") {
+      let errorMessageLastName = "Please enter your last name.";
+      document.getElementById("endorse_lname_break").innerHTML =
+        "<p>" + errorMessageLastName + "</p>";
+    }
+
+    if (occupation === "") {
+      let errorMessageOccupation = "Please enter your occupation.";
+      document.getElementById("occupation_break").innerHTML =
+        "<p>" + errorMessageOccupation + "</p>";
+    }
+
+    let upperCaseFirstName =
+      firstName.charAt(0).toUpperCase() + firstName.slice(1);
+    let upperCaseLastName =
+      lastName.charAt(0).toUpperCase() + lastName.slice(1);
+    let upperCaseOccupation =
+      occupation.charAt(0).toUpperCase() + occupation.slice(1);
+
+    let newEndorsement = {
+      name: upperCaseFirstName + " " + upperCaseLastName,
+      occupation: upperCaseOccupation,
+    };
+
+    if (firstName != "" && lastName != "" && occupation != "") {
+      $.post("/add-endorsement", newEndorsement).then(function(data) {
+        console.log(data);
+        alert(`Thank you for your endorsement!`);
+        location.reload();
+      });
+    }
+  });
+
+  getEndorsementNames();
+
+  function getEndorsementNames() {
+    $.get("/endorsements").then(function(data) {
+      console.log(data);
+      let p = "<p>";
+      for (var i = 0; i < data.length; i++) {
+        let name = data[i].name;
+        let occupation = data[i].occupation;
+
+        $("#endorsement_names").append(name + ", " + occupation + " &#9670; ");
+      }
+    });
+  }
 });
